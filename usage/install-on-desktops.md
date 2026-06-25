@@ -71,25 +71,17 @@ For Droidian, skip directly to the last step
 
 For Ubuntu Touch, these steps are not needed
 
-Make sure you have Wayland Session enabled (Ubuntu 22.04+)
-
+Make sure you have Wayland Session enabled.
+The output of this command must be wayland:
+```
+echo $XDG_SESSION_TYPE
+```
+ 
 {% embed url="https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-22-04-desktop" %}
 
-* Install pre-requisites
+* Install waydroid from the official package repository
 ```bash
-sudo apt install curl ca-certificates -y
-```
-
-* Add the official repository
-```bash
-curl -s https://repo.waydro.id | sudo bash
-```
-If the script fails to detect your distribution, you can provide a valid option by appending `-s <DISTRO>`.
-Currently supported values are: **mantic**, **focal**, **jammy**, **kinetic**, **lunar**, **noble**, **plucky**, **questing**, **bookworm**, **bullseye**, **trixie**, **sid**
-
-* Install waydroid
-```bash
-sudo apt install waydroid -y
+sudo apt install waydroid
 ```
 
 Then start Waydroid from the applications menu.
